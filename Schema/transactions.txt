@@ -1,0 +1,21 @@
+CREATE TABLE transactions (
+    id VARCHAR(255) PRIMARY KEY,
+    portfolio_id VARCHAR(255),
+    isin VARCHAR(50),
+    type VARCHAR(20),
+    status VARCHAR(50),
+    price_currency VARCHAR(10),
+    price_amount DECIMAL(15,2),
+    quantity DECIMAL(15,2),
+    consideration_currency VARCHAR(10),
+    consideration_amount DECIMAL(15,2),
+    charges_currency VARCHAR(10),
+    charges_amount DECIMAL(15,2),
+    date DATE,
+    timestamp TIMESTAMP,
+    settled_on DATE,
+    updated_at TIMESTAMP,
+    book_cost DECIMAL(15,2),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+

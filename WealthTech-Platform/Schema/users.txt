@@ -1,0 +1,26 @@
+CREATE TABLE users (
+    id VARCHAR(255) PRIMARY KEY,
+    client_reference VARCHAR(255) NOT NULL,
+    title VARCHAR(20),
+    forename VARCHAR(255),
+    middlename VARCHAR(255),
+    surname VARCHAR(255),
+    previous_surname VARCHAR(255),
+    country_of_birth VARCHAR(100),
+    email_address VARCHAR(255),
+    telephone_number VARCHAR(20),
+    date_of_birth DATE,
+    date_of_death DATE,
+    tax_residencies JSON,
+    nationalities JSON,
+    employment_status VARCHAR(50),
+    industry VARCHAR(255),
+    sources_of_wealth JSON,
+    annual_income DECIMAL(15,2),
+    vulnerability_status VARCHAR(50),
+    vulnerability_reason VARCHAR(255),
+    vulnerability_duration VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+

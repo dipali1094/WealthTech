@@ -1,0 +1,14 @@
+CREATE TABLE compliance_logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    log_type VARCHAR(50),
+    log_details JSON,
+    response_id VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE compliance_logs
+ADD CONSTRAINT fk_transaction_id
+FOREIGN KEY (transaction_id)
+REFERENCES transactions(id);
+
+

@@ -1,0 +1,11 @@
+CREATE TABLE investment_accounts (
+    id VARCHAR(255) PRIMARY KEY,
+    client_reference VARCHAR(255) NOT NULL,
+    name VARCHAR(255),
+    type VARCHAR(50),
+    status VARCHAR(50),
+    currency VARCHAR(10),
+    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
